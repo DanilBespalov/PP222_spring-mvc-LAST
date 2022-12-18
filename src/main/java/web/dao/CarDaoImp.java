@@ -7,17 +7,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+
 @Component
-public class CarDaoReal implements CarDao {
+public class CarDaoImp implements CarDao {
     private int count = 0;
     private final List<Car> cars = new ArrayList<>();
 
     {
-        cars.add(new Car(++count, "Kia Shortage", "Black"));
-        cars.add(new Car(++count, "Kia RioX", "Black"));
-        cars.add(new Car(++count, "Kia K5", "Red"));
-        cars.add(new Car(++count, "Kia Rio", "Green"));
-        cars.add(new Car(++count, "Porsche", "Metal"));
+        cars.add(new Car(++count, "Car1", "Color1"));
+        cars.add(new Car(++count, "Car2", "Color2"));
+        cars.add(new Car(++count, "eCar3", "Color3"));
+        cars.add(new Car(++count, "eCar4", "Color4"));
+        cars.add(new Car(++count, "Car5", "Color5"));
     }
 
     @Override

@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>CarsPage</title>
+    <title>Cars</title>
 </head>
 <body>
 <h1 th:text="${title}"/>
@@ -15,6 +15,7 @@
     </tr>
     </thead>
     <tbody>
+
     <tr th:each="car : ${cars}">
         <td th:text="${car.getId()}">
         <td th:text="${car.getModel()}">
