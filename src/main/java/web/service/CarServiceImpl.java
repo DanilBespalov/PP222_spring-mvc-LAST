@@ -8,13 +8,19 @@ import web.model.Car;
 import java.util.List;
 
 @Component
-public class CarServiceReal implements CarService {
+public class CarServiceImpl implements CarService {
 
+    private final CarDao carDao;
     @Autowired
-    private CarDao carDao;
+    public CarServiceImpl(CarDao carDao) {
+        this.carDao = carDao;
+    }
 
     @Override
     public List<Car> getCars(int count) {
+        if (count == 0) {
+            return (List<Car>) carDao;
+        }
         return carDao.getCars(count);
     }
 }
